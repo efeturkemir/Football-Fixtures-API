@@ -1,10 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 
-
-# Function to fetch Premier League fixtures
-def fetch_premier_league_fixtures():
-    link = "https://onefootball.com/en/competition/premier-league-9/fixtures"
+def fetch_laliga_fixtures():
+    link = "http://onefootball.com/en/competition/laliga-10/fixtures"
     source = requests.get(link).text
     page = BeautifulSoup(source, "html.parser")
 
