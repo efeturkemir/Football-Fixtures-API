@@ -22,7 +22,7 @@ async def get_bundesliga_matches():
     matches = fetch_bundesliga_fixtures()
     return {"matches": matches}
 
-@app.get("/matches/laliga")
+@app.get("/matches/la_liga")
 async def get_laliga_matches():
     matches = fetch_laliga_fixtures()
     return {"matches": matches}
