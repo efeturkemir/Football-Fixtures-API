@@ -7,7 +7,7 @@ A FastAPI-powered service to retrieve real-time match fixtures and results for t
 
 ## 🌟 Features
 ```bash
-- Get upcoming matches for both leagues
+- Get upcoming matches for multiple top European leagues
 - View completed match results
 - Simple RESTful API endpoints
 - Fast response times with asynchronous processing
