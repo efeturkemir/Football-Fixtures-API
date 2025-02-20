@@ -1,9 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
 
-def fetch_laliga_fixtures():
-    link = "http://onefootball.com/en/competition/laliga-10/fixtures"
-    source = requests.get(link).text
+
+def fetch_match_fixtures(url, league_name):
+    source = requests.get(url).text
     page = BeautifulSoup(source, "html.parser")
 
     # Extract the container with matches
@@ -49,7 +49,8 @@ def fetch_laliga_fixtures():
                     'date': date_time,
                     'time': match_time,
                     'home_goals': home_goals,
-                    'away_goals': away_goals
+                    'away_goals': away_goals,
+                    'league': league_name
                 })
 
     return fixtures
